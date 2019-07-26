@@ -1,0 +1,113 @@
+<div class="view-in-ts">
+  <a href="https://station.trustar.co/browse/search?q={{details.value}}">View in TruSTAR Station {{fa-icon "external-link-square" class="external-link-icon"}}</a>
+</div>
+{{#if details}}
+  <h1 class="p-title">
+      {{fa-icon "info" fixedWidth=true}}  Indicator Metadata
+  </h1>
+  {{#if details.indicatorType}}
+    <div>
+      <span class="p-key">Indicator Type:</span>
+      <span class="p-value">{{details.indicatorType}}</span>
+    </div>
+  {{/if}}
+  {{#if details.sightings}}
+    <div>
+      <span class="p-key"># of Sightings:</span>
+      <span class="p-value">{{details.sightings}}</span>
+    </div>
+  {{/if}}
+  {{#if details.noteCount}}
+    <div>
+      <span class="p-key"># of Notes:</span>
+      <span class="p-value">{{details.noteCount}}</span>
+    </div>
+  {{/if}}
+  {{#if details.correlationCount}}
+    <div>
+      <span class="p-key"># of Correlations:</span>
+      <span class="p-value">{{details.correlationCount}}</span>
+    </div>
+  {{/if}}
+  {{#if details.firstSeen}}
+    <div>
+      <span class="p-key">First Seen:</span>
+      <span class="p-value">{{moment-format details.firstSeen timeZone=timezone}}</span>
+    </div>
+  {{/if}}
+  {{#if details.lastSeen}}
+    <div>
+      <span class="p-key">Last Seen:</span>
+      <span class="p-value">{{moment-format details.lastSeen timeZone=timezone}}</span>
+    </div>
+  {{/if}}
+  {{#if details.tags}}
+    <div>
+        <span class="p-title">{{fa-icon "tag" fixedWidth=true}} Indicator Tags </span>
+    </div>
+    <div class="polarityMetadata">
+        {{#each details.tags as |tag|}}
+            <span class="ts-source-tag">{{tag.name}}</span>
+        {{/each}}
+    </div>
+  {{/if}}
+  {{#if details.notes}}
+    <div>
+        <span class="p-title">{{fa-icon "sticky-note" fixedWidth=true}} Indicator Notes </span>
+    </div>
+    <div class="polarityMetadata">
+        {{#each details.notes as |note index|}}
+            <span class="p-key">Note {{index}}:</span>
+            <span class="p-value">{{note}}<br></span>
+        {{/each}}
+    </div>
+  {{/if}}
+{{/if}}
+
+
+{{#if block.entity}}
+  <span class="p-action view-more" {{action "toggleScanner"}}>
+    {{#if isShowingDiv}}
+        (Hide Polarity Metadata{{fa-icon "angle-up" fixedWidth=true}})
+    {{else}}
+        (View Polarity Metadata{{fa-icon "angle-down" fixedWidth=true}})
+    {{/if}}
+      </span>
+
+{{#if isShowingDiv}}
+<div>
+{{#if (eq block.entity.requestContext.requestType "OnDemand")}}
+  <div class="polarityMeta">
+    <span class="p-key">Request Type:</span>
+    <span class="p-value">{{block.entity.requestContext.requestType}}</span>
+  </div>
+{{/if}}
+
+{{#if block.entity.requestContext.windowTitle}}
+  <div class="polarityMeta">
+    <span class="p-key">Window Title:</span>
+    <span class="p-value">{{block.entity.requestContext.windowTitle}}</span>
+  </div>
+{{/if}}
+
+{{#if block.entity.requestContext.processName}}
+  <div>
+    <span class="p-key">Process Name:</span>
+    <span class="p-value">{{block.entity.requestContext.processName}}</span>
+  </div>
+{{/if}}
+
+{{!--
+{{#if block.entity.channels}}
+<div>
+    <span class="p-key">Associated Polarity Channels:</span>
+    {{#each block.entity.channels as |channel|}}
+        <li type="square" class="p-value">{{channel.name}}</li>
+    {{/each}}
+</div>
+{{/if}}
+--}}
+
+</div>
+{{/if}}
+{{/if}}
