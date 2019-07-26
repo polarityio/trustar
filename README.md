@@ -5,6 +5,7 @@ The Polarity TruSTAR integration allows Polarity to search the TruSTAR API to re
 To learn more about TruSTAR, please visit: [official website](https://www.trustar.co/)
 
 You can check out the integration in action below:
+
 ![trustar](https://user-images.githubusercontent.com/22529325/61951369-d07b6a80-af7e-11e9-93b1-0bf56053b8f5.gif)
 
 ## TruSTAR Integration Options
