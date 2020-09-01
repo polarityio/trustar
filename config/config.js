@@ -24,7 +24,7 @@ module.exports = {
    */
   description:
     "TruSTAR is an intelligence management platform that helps enterprises easily enrich and operationalize their security data.",
-  entityTypes: ['IPv4', 'hash', 'email', 'url'],
+  entityTypes: ['IPv4', 'hash', 'email', 'url', 'domain'],
   /**
    * An array of style files (css or less) that will be included for your integration. Any styles specified in
    * the below files can be used in your custom template.
