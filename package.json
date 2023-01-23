@@ -1,12 +1,12 @@
 {
-  "main": "./integration.js",
   "name": "TruSTAR",
-  "version": "3.0.4-beta",
+  "version": "3.0.5-beta",
+  "main": "./integration.js",
   "private": true,
   "dependencies": {
-    "request": "^2.88",
-    "lodash": "^4.17.20",
     "async": "^3.2",
-    "node-cache": "^4.2.1"
+    "lodash": "^4.17.20",
+    "node-cache": "^4.2.1",
+    "postman-request": "^2.88.1-postman.31"
   }
 }

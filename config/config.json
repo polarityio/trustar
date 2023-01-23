@@ -1,0 +1,64 @@
+{
+  "name": "TruSTAR",
+  "acronym": "TRUS",
+  "description": "TruSTAR is an intelligence management platform that helps enterprises easily enrich and operationalize their security data.",
+  "entityTypes": ["IPv4", "hash", "email", "url", "domain"],
+  "defaultColor": "light-pink",
+  "styles": ["./styles/ts.less"],
+  "block": {
+    "component": {
+      "file": "./components/ts-block.js"
+    },
+    "template": {
+      "file": "./templates/ts-block.hbs"
+    }
+  },
+  "summary": {
+    "component": {
+      "file": "./components/ts-summary.js"
+    },
+    "template": {
+      "file": "./templates/ts-summary.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "url",
+      "name": "Base TruSTAR API URL",
+      "description": "The base URL for the TruSTAR API including the schema (i.e., https://)",
+      "type": "text",
+      "default": "https://api.trustar.co",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "apiKey",
+      "name": "Valid API Key",
+      "description": "Valid TruSTAR API Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "apiSecret",
+      "name": "Valid API Secret",
+      "description": "Valid TruSTAR API Secret",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    }
+  ]
+}
