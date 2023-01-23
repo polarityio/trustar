@@ -2,16 +2,9 @@
   "name": "TruSTAR",
   "acronym": "TRUS",
   "description": "TruSTAR is an intelligence management platform that helps enterprises easily enrich and operationalize their security data.",
-  "entityTypes": [
-    "IPv4",
-    "hash",
-    "email",
-    "url",
-    "domain"
-  ],
-  "styles": [
-    "./styles/ts.less"
-  ],
+  "entityTypes": ["IPv4", "hash", "email", "url", "domain"],
+  "defaultColor": "light-pink",
+  "styles": ["./styles/ts.less"],
   "block": {
     "component": {
       "file": "./components/ts-block.js"
