@@ -1,0 +1,31 @@
+{
+  "root": {
+    "path": "",
+    "on_null": "return_empty"
+  },
+  "pipeline": [
+    {
+      "op": "copy",
+      "from": "indicatorType",
+      "to": "reduced_results.indicator_type"
+    },
+    {
+      "op": "copy",
+      "from": "sightings",
+      "to": "reduced_results.sightings"
+    },
+    {
+      "op": "copy",
+      "from": "noteCount",
+      "to": "reduced_results.note_count"
+    },
+    {
+      "op": "prune",
+      "strategy": "empty_values",
+      "target": "reduced_results"
+    }
+  ],
+  "output": {
+    "result": "$working.reduced_results"
+  }
+}

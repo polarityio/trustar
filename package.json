@@ -1,6 +1,6 @@
 {
   "name": "TruSTAR",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "main": "./integration.js",
   "private": true,
   "dependencies": {

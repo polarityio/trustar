@@ -1,0 +1,59 @@
+{
+  "guid": "8f7d6e5c-4b3a-2d1e-0f9c-8b7a6d5e4c3b",
+  "indicatorType": "IP",
+  "value": "192.168.100.50",
+  "sightings": 47,
+  "noteCount": 3,
+  "correlationCount": 12,
+  "firstSeen": 1617235200000,
+  "lastSeen": 1704067200000,
+  "priorityLevel": "MEDIUM",
+  "attributes": {
+    "malicious": true,
+    "internal": false
+  },
+  "tags": [
+    {
+      "id": "tag-001",
+      "name": "malware",
+      "enclaveId": "enc-123"
+    },
+    {
+      "id": "tag-002", 
+      "name": "apt28",
+      "enclaveId": "enc-123"
+    },
+    {
+      "id": "tag-003",
+      "name": "phishing",
+      "enclaveId": "enc-456"
+    }
+  ],
+  "notes": [
+    "Observed in phishing campaign targeting financial institutions",
+    "Associated with APT28 infrastructure based on TTP analysis",
+    "IP resolves to hosting provider frequently used by threat actors"
+  ],
+  "enclaves": [
+    {
+      "id": "enc-123",
+      "name": "Threat Intelligence Enclave",
+      "read": true,
+      "update": false
+    }
+  ],
+  "sources": [
+    {
+      "key": "ext-source-001",
+      "name": "External Feed Alpha"
+    }
+  ],
+  "observedAt": 1704067200000,
+  "score": 75,
+  "submissionTags": ["automated", "ioc-feed"],
+  "metadata": {
+    "reportId": "rpt-9876",
+    "confidence": "high",
+    "tlp": "AMBER"
+  }
+}
